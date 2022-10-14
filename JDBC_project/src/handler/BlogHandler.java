@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class BlogHandler {
 
+
+    //INSERT
     public static void insertPerson (Connection c, Person person) {
         String insertPerson = "INSERT INTO blogs.phonebook  (id, name, number, created, slug)"
                 + "VALUES (?, ?, ?, ?, ?)";
@@ -32,6 +34,7 @@ public class BlogHandler {
         }
     }
 
+    //SELECT
     //Sql injection?
     public static void select (Connection c, String text) {
         //try(Statement st = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)){
@@ -81,7 +84,7 @@ public class BlogHandler {
         }
     }
 
-    //LEKÉRDEZÉS, teljes lista
+    //QUERY ALL
     public static void queryAll (Connection c) {
         try(Statement st = c.createStatement()){
             String query = "SELECT id, name, number, created, slug FROM blogs.phonebook ";//a végére teljes elérési útvonal kell!

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment=" update BlogHandler">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment=" select method altered to PreparedStatement type">
       <change beforePath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665781688929</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary=" select method altered to PreparedStatement type">
+      <created>1665784380018</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665784380018</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +214,7 @@
     <MESSAGE value=" readPostData method created" />
     <MESSAGE value=" readPostData method altered&#10; create insert method" />
     <MESSAGE value=" update BlogHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value=" update BlogHandler" />
+    <MESSAGE value=" select method altered to PreparedStatement type" />
+    <option name="LAST_COMMIT_MESSAGE" value=" select method altered to PreparedStatement type" />
   </component>
 </project>
