@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment="create Post class">
-      <change afterPath="$PROJECT_DIR$/.idea/BlogApplication_JDBC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC_project/src/connection/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment="Main altered">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JDBC_project/src/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BlogApplication_JDBC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BlogApplication_JDBC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDBC_project/JDBC_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/JDBC_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC_project/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +42,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AdditionalLibraries/commons-lang3-3.12.0.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AdditionalLibraries/postgresql-42.3.0.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35976788" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andris\IdeaProjects\BlogApplication_JDBC\JDBC_project\src" />
+      <recent name="C:\Users\Andris\IdeaProjects\BlogApplication_JDBC\JDBC_project" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -106,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665740971679</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Main altered">
+      <created>1665744681726</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665744681726</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create project" />
     <MESSAGE value="create Post class" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Post class" />
+    <MESSAGE value="Main altered" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main altered" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package main;
 
 import connection.ConnectionFactory;
+import handler.BlogHandler;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -18,14 +19,14 @@ public class Main {
     }
 
     private void run(Connection connection) {
-
+        BlogHandler.queryAll(connection);
     }
 
     private static ConnectionFactory createConnectionFactory() throws IOException {
-        Properties dbProperies = new Properties ();
-        dbProperies.load(Main.class.getResourceAsStream("/database.properties"));
+        Properties dbProperties = new Properties ();
+        dbProperties.load(Main.class.getResourceAsStream("/database.properties"));
 
-        ConnectionFactory connectionFactory = new ConnectionFactory(dbProperies);
+        ConnectionFactory connectionFactory = new ConnectionFactory(dbProperties);
         return connectionFactory;
     }
 }
