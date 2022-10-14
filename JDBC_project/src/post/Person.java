@@ -2,9 +2,11 @@ package post;
 
 import java.time.ZonedDateTime;
 
-public class Post {
+public class Person {
 
     private long id;
+
+    private String name;
 
     private String number;
 
@@ -13,7 +15,7 @@ public class Post {
     private ZonedDateTime created;
 
 
-    public Post(long id, String name, String number, String slug, ZonedDateTime created) {
+    public Person(long id, String name, String number, String slug, ZonedDateTime created) {
         super();
         this.id = id;
         this.name = name;
@@ -22,7 +24,7 @@ public class Post {
         this.created = created;
     }
 
-    public Post() {
+    public Person() {
 
     }
 
@@ -67,7 +69,7 @@ public class Post {
         this.created = created;
     }
 
-    private String name;
+
 
 
 

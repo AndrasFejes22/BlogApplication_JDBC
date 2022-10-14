@@ -1,25 +1,30 @@
 package handler;
 
-import post.Post;
+import post.Person;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.time.ZonedDateTime;
 import java.util.Scanner;
 
 public class BlogHandler {
 
-    public static void insert (Connection c) {
-        String query = "insert into blogs.phonebook values (15, 'John Doe', '06701453477', current_timestamp, 'jo_oreg_john_doe')";
-        try(Statement statement = c.createStatement()){
+    public static void insertPerson (Connection c, Person person) {
+        String insertPerson = "INSERT INTO blogs.phonebook  (id, name, number, created, slug)"
+                + "VALUES (?, ?, ?, ?, ?)";
+        try(PreparedStatement statement = c.prepareStatement(insertPerson)){
 
-            statement.execute(query);
+            statement.setLong(1, person.getId());
+            statement.setString(2, person.getName());
+            statement.setString(3, person.getNumber());
+            statement.setTimestamp(4, Timestamp.from(person.getCreated().toInstant()));
+            statement.setString(5, person.getSlug());
+
+            int changedRows = statement.executeUpdate();
+            System.out.println("Changed rows: " + changedRows);
 
             System.out.println("Posts table recreated");
         }catch(SQLException e) {
-            System.err.println("Error occured when executing SQL statement");
+            System.err.println("Error occurred when executing SQL statement");
             System.err.println("Error code: " + e.getErrorCode());
             System.err.println("Message: " + e.getMessage());
             System.err.println("State: " + e.getSQLState());
@@ -43,7 +48,7 @@ public class BlogHandler {
                 rs.beforeFirst();
 
                 while (rs.next()) {
-                    Post p = new Post(); //ezeket pl be lehet pakolni egy listába és akkot list-et adunk vissza, és azon lehet dolgozni
+                    Person p = new Person(); //ezeket pl be lehet pakolni egy listába és akkot list-et adunk vissza, és azon lehet dolgozni
                     //pl stream()-okkal (filter, stb)
                     p.setId(rs.getLong("id"));
                     p.setName(rs.getString("name"));
@@ -75,7 +80,7 @@ public class BlogHandler {
             ResultSet rs = st.executeQuery(query);
 
             while(rs.next()){
-                Post p = new Post(); //ezeket pl be lehet pakolni egy listába és akkot list-et adunk vissza, és azon lehet dolgozni
+                Person p = new Person(); //ezeket pl be lehet pakolni egy listába és akkot list-et adunk vissza, és azon lehet dolgozni
                 //pl stream()-okkal (filter, stb)
                 p.setId(rs.getLong("id"));
                 p.setName(rs.getString("name"));
@@ -95,24 +100,36 @@ public class BlogHandler {
         }
     }
 
-    private static Post readPostData(Scanner scanner) {
-        try(scanner){
-            System.out.println("id: ");
-            Long id = scanner.nextLong();
+    public static void update(Connection c, Person person){
+        //String updatePost = "UPDATE post SET "
+    }
 
-            System.out.println("name: ");
-            String name = scanner.nextLine();
 
-            System.out.println("number: ");
-            String number = scanner.nextLine();
 
-            System.out.println("slug: ");
-            String slug = scanner.nextLine();
+    public static Person readPersonData(Scanner scanner2) {
+        //try(Scanner scanner2 = new Scanner(System.in)){
+        Person person = new Person();
+        try{
 
-            Post post = new Post(id, name, number, slug, ZonedDateTime.now());
+            System.out.print("name: ");
+            String name = scanner2.nextLine();
 
-            return post;
+            System.out.print("number: ");
+            String number = scanner2.nextLine();
+
+            System.out.print("slug: ");
+            String slug = scanner2.nextLine();
+
+            System.out.print("id: ");
+            Long id = scanner2.nextLong();
+
+             person = new Person(id, name, number, slug, ZonedDateTime.now());
+
+
+        }catch (NumberFormatException e) {
+            e.printStackTrace();
         }
 
+        return person;
     }
 }

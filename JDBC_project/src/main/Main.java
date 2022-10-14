@@ -2,6 +2,7 @@ package main;
 
 import connection.ConnectionFactory;
 import handler.BlogHandler;
+import post.Person;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -57,6 +58,19 @@ public class Main {
                         }
                         System.out.println();
                         break;
+                    case 3: //insert
+                        try(Connection connection = connectionFactory.getConnection()){
+                            Person newPerson = BlogHandler.readPersonData(scanner);
+                            BlogHandler.insertPerson(connection, newPerson);
+
+                        }catch(SQLException e) {
+                            System.err.println("Error code: " + e.getErrorCode());
+                            System.err.println("Message: " + e.getMessage());
+                            System.err.println("State: " + e.getSQLState());
+                            e.printStackTrace();
+                        }
+                        System.out.println();
+                        break;
 
                 }
 
@@ -82,7 +96,7 @@ public class Main {
             try {
                 number = scanner.nextInt();
                 if(number > 6 || number < 0){
-                    System.out.println("You can only enter a number between 0 and 5!");
+                    System.out.println("You can only enter a number between 0 and 6!");
                     inputCorrect = false;
                 }
 
@@ -101,9 +115,9 @@ public class Main {
         System.out.println("--------------------------------------------");
         System.out.println("1. QueryAll");
         System.out.println("2. Select");
-        System.out.println("3. Update");
+        System.out.println("3. Insert");
         System.out.println("4. Delete");
-        System.out.println("5. Insert");
+        System.out.println("5. Update");
         System.out.println("6. \u001b[1;32m" + "NEW!" + "\u001b[0m");
         System.out.println("0. Exit");
     }

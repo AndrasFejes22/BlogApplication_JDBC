@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment=" menu method in Main class altered (select)">
+    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment=" readPostData method created">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC_project/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC_project/src/post/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/post/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665760354877</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=" readPostData method created">
+      <created>1665773282982</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665773282982</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +194,7 @@
     <MESSAGE value="creata manu method in Main class" />
     <MESSAGE value=" menu method in Main class altered" />
     <MESSAGE value=" menu method in Main class altered (select)" />
-    <option name="LAST_COMMIT_MESSAGE" value=" menu method in Main class altered (select)" />
+    <MESSAGE value=" readPostData method created" />
+    <option name="LAST_COMMIT_MESSAGE" value=" readPostData method created" />
   </component>
 </project>
