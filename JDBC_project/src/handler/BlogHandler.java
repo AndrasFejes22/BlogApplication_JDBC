@@ -33,6 +33,13 @@ public class BlogHandler {
             //String query = "SELECT id, name, number, created, slug FROM blogs.phonebook WHERE id = 1";//a végére teljes elérési útvonal kell!
             ResultSet rs = st.executeQuery(query);
 
+
+            if(!rs.next()){
+                System.out.println("No such name or number in the list!");
+            }else{
+                System.out.println("The name or number you are looking for is based on the entry found:");
+            }
+
             while(rs.next()){
                 Post p = new Post(); //ezeket pl be lehet pakolni egy listába és akkot list-et adunk vissza, és azon lehet dolgozni
                 //pl stream()-okkal (filter, stb)
@@ -44,6 +51,7 @@ public class BlogHandler {
                 //ehhez a Post class toString-ben a "skipp nulls" be van most állítva, mert szar a formátuma
 
                 System.out.println(p);
+
             }
 
         }catch(SQLException e) {
