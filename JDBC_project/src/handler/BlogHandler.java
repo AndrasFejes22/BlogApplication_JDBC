@@ -32,6 +32,7 @@ public class BlogHandler {
         }
     }
 
+    //Sql injection?
     public static void select (Connection c, String text) {
         try(Statement st = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)){
             String query = "select * \r\n"
