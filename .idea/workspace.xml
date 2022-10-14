@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment="Main altered">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC_project/src/database.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BlogApplication_JDBC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BlogApplication_JDBC.iml" afterDir="false" />
+    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment="create BlogHandler&#10;class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JDBC_project/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/main/Main.java" afterDir="false" />
     </list>
@@ -117,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665744681726</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="create BlogHandler&#10;class">
+      <created>1665746979436</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665746979436</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +138,7 @@
     <MESSAGE value="create project" />
     <MESSAGE value="create Post class" />
     <MESSAGE value="Main altered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main altered" />
+    <MESSAGE value="create BlogHandler&#10;class" />
+    <option name="LAST_COMMIT_MESSAGE" value="create BlogHandler&#10;class" />
   </component>
 </project>
