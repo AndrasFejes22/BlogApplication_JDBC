@@ -1,1 +1,1 @@
-# PhonebookApp_SQLite_JavaFX
+# BlogApplication_JDBC
