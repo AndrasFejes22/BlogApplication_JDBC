@@ -29,10 +29,25 @@ public class Main {
                 System.out.println();
                 menuItem = readInt("Please give a whole number!", scanner);
                 switch (menuItem) {
-                    case 1:
+                    case 1: //query all
                         try(Connection connection = connectionFactory.getConnection()){
 
                             BlogHandler.queryAll(connection);
+
+                        }catch(SQLException e) {
+                            System.err.println("Error code: " + e.getErrorCode());
+                            System.err.println("Message: " + e.getMessage());
+                            System.err.println("State: " + e.getSQLState());
+                            e.printStackTrace();
+                        }
+                        System.out.println();
+                        break;
+                    case 2: //select
+                        try(Connection connection = connectionFactory.getConnection()){
+                            String text = "";
+                            System.out.println("Please give a number: ");
+                            text = scanner.nextLine();
+                            BlogHandler.select(connection, text);
 
                         }catch(SQLException e) {
                             System.err.println("Error code: " + e.getErrorCode());
@@ -85,10 +100,11 @@ public class Main {
         System.out.println("Please choose from the following menu items:");
         System.out.println("--------------------------------------------");
         System.out.println("1. QueryAll");
-        System.out.println("2. Insert");
+        System.out.println("2. Select");
         System.out.println("3. Update");
         System.out.println("4. Delete");
-        System.out.println( "\u001b[1;32m" + "NEW!" + "\u001b[0m");
+        System.out.println("5. Insert");
+        System.out.println("6. \u001b[1;32m" + "NEW!" + "\u001b[0m");
         System.out.println("0. Exit");
     }
 }

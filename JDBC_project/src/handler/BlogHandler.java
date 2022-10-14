@@ -25,11 +25,11 @@ public class BlogHandler {
         }
     }
 
-    private static void select (Connection c) {
+    public static void select (Connection c, String text) {
         try(Statement st = c.createStatement()){
             String query = "select * \r\n"
                     + "from blogs.phonebook\r\n"
-                    + "where number like '0680%'";//a végére teljes elérési útvonal kell!
+                    + "where number like" + "'" + text +  "%'";//a végére teljes elérési útvonal kell!
             //String query = "SELECT id, name, number, created, slug FROM blogs.phonebook WHERE id = 1";//a végére teljes elérési útvonal kell!
             ResultSet rs = st.executeQuery(query);
 
