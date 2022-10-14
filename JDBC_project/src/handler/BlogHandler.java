@@ -29,7 +29,7 @@ public class BlogHandler {
         try(Statement st = c.createStatement()){
             String query = "select * \r\n"
                     + "from blogs.phonebook\r\n"
-                    + "where number like" + "'" + text +  "%'";//a végére teljes elérési útvonal kell!
+                    + "where number like" + "'%" + text + "%'" + "or name like" + "'%" + text + "%'";//a végére teljes elérési útvonal kell!
             //String query = "SELECT id, name, number, created, slug FROM blogs.phonebook WHERE id = 1";//a végére teljes elérési útvonal kell!
             ResultSet rs = st.executeQuery(query);
 

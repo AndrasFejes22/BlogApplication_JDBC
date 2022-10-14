@@ -45,7 +45,7 @@ public class Main {
                     case 2: //select
                         try(Connection connection = connectionFactory.getConnection()){
                             String text = "";
-                            System.out.println("Please give a number: ");
+                            System.out.println("Please give a number or a name: ");
                             text = scanner.nextLine();
                             BlogHandler.select(connection, text);
 
