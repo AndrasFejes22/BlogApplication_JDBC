@@ -84,11 +84,10 @@ public class Main {
     public static void printingMenu() {
         System.out.println("Please choose from the following menu items:");
         System.out.println("--------------------------------------------");
-        System.out.println("1. queryAll");
-        System.out.println("2. "); //for tests, can put walls on top of each other and next to each other--> TO DO
-        System.out.println("3. ");
-        System.out.println("4. ");
-        System.out.println("5. ");
+        System.out.println("1. QueryAll");
+        System.out.println("2. Insert");
+        System.out.println("3. Update");
+        System.out.println("4. Delete");
         System.out.println( "\u001b[1;32m" + "NEW!" + "\u001b[0m");
         System.out.println("0. Exit");
     }
