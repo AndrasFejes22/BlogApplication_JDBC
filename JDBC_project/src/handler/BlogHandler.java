@@ -34,14 +34,22 @@ public class BlogHandler {
 
     //Sql injection?
     public static void select (Connection c, String text) {
-        try(Statement st = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)){
+        //try(Statement st = c.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)){
+        try{
             String query = "select * \r\n"
                     + "from blogs.phonebook\r\n"
                     + "where number like" + "'%" + text + "%'" + "or name like" + "'%" + text + "%'";
             //String query = "SELECT id, name, number, created, slug FROM blogs.phonebook WHERE id = 1";//
             //String query = "select * from blogs.phonebook where "number" like '%jakab%' or "name" like '%jakab%';";//működik
-            ResultSet rs = st.executeQuery(query);
+            String query2 = "select * \r\n"
+                    + "from blogs.phonebook\r\n"
+                    + "where number LIKE ? or name LIKE ?";
 
+            PreparedStatement preparedStatement = c.prepareStatement(query2);
+            preparedStatement.setString(1, "%" + text + "%");
+            preparedStatement.setString(2, "%" + text + "%");
+            //ResultSet rs = st.executeQuery(query);
+            ResultSet rs = preparedStatement.executeQuery();
 
             if(rs.next()){
 

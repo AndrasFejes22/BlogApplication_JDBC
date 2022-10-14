@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment=" readPostData method altered&#10; create insert method" />
+    <list default="true" id="0a159529-bf9e-4d9e-945d-c39d6ba1089a" name="Changes" comment=" update BlogHandler">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC_project/src/handler/BlogHandler.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665779789467</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=" update BlogHandler">
+      <created>1665781688929</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665781688929</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +207,7 @@
     <MESSAGE value=" menu method in Main class altered (select)" />
     <MESSAGE value=" readPostData method created" />
     <MESSAGE value=" readPostData method altered&#10; create insert method" />
-    <option name="LAST_COMMIT_MESSAGE" value=" readPostData method altered&#10; create insert method" />
+    <MESSAGE value=" update BlogHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value=" update BlogHandler" />
   </component>
 </project>
