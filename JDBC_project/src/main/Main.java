@@ -2,7 +2,7 @@ package main;
 
 import connection.ConnectionFactory;
 import handler.PersonHandler;
-import post.Person;
+import person.Person;
 
 import java.io.IOException;
 import java.sql.Connection;

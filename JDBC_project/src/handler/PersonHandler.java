@@ -1,6 +1,6 @@
 package handler;
 
-import post.Person;
+import person.Person;
 
 import java.sql.*;
 import java.time.ZonedDateTime;

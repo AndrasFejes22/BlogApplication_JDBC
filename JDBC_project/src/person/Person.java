@@ -1,4 +1,4 @@
-package post;
+package person;
 
 import java.time.ZonedDateTime;
 
