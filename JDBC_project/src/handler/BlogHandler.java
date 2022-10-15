@@ -22,6 +22,30 @@ public class BlogHandler {
             statement.setString(5, person.getSlug());
 
             int changedRows = statement.executeUpdate();
+            System.out.println("Modified rows: " + changedRows);
+
+            System.out.println("Posts table recreated");
+        }catch(SQLException e) {
+            System.err.println("Error occurred when executing SQL statement");
+            System.err.println("Error code: " + e.getErrorCode());
+            System.err.println("Message: " + e.getMessage());
+            System.err.println("State: " + e.getSQLState());
+            //System.err.println("State: " + e.getLocalizedMessage());
+        }
+    }
+
+    //UPDATE
+    public static void updatePerson (Connection c, Person person) {
+        String insertPerson = "UPDATE blogs.phonebook SET name =?, number =?, slug =? WHERE id =?)"
+                + "VALUES (?, ?, ?, ?, ?)";
+        try(PreparedStatement statement = c.prepareStatement(insertPerson)){
+
+            statement.setString(1, person.getName());
+            statement.setString(2, person.getNumber());
+            statement.setString(3, person.getSlug());
+            statement.setLong(4, person.getId());
+
+            int changedRows = statement.executeUpdate();
             System.out.println("Changed rows: " + changedRows);
 
             System.out.println("Posts table recreated");
