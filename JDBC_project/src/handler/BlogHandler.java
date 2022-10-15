@@ -34,10 +34,32 @@ public class BlogHandler {
         }
     }
 
+    //DELETE
+    public static void deletePerson (Connection c, Person person) {
+        String insertPerson = "DELETE blogs.phonebook WHERE name =?, or  id =?";
+
+        try(PreparedStatement statement = c.prepareStatement(insertPerson)){
+
+            statement.setString(1, person.getName());
+            statement.setLong(2, person.getId());
+
+            int changedRows = statement.executeUpdate();
+            System.out.println("Changed rows: " + changedRows);
+
+            System.out.println("Posts table recreated");
+        }catch(SQLException e) {
+            System.err.println("Error occurred when executing SQL statement");
+            System.err.println("Error code: " + e.getErrorCode());
+            System.err.println("Message: " + e.getMessage());
+            System.err.println("State: " + e.getSQLState());
+            //System.err.println("State: " + e.getLocalizedMessage());
+        }
+    }
+
     //UPDATE
     public static void updatePerson (Connection c, Person person) {
-        String insertPerson = "UPDATE blogs.phonebook SET name =?, number =?, slug =? WHERE id =?)"
-                + "VALUES (?, ?, ?, ?, ?)";
+        String insertPerson = "UPDATE blogs.phonebook SET name =?, number =?, slug =? WHERE id =?";
+
         try(PreparedStatement statement = c.prepareStatement(insertPerson)){
 
             statement.setString(1, person.getName());

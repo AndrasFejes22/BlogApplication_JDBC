@@ -71,7 +71,19 @@ public class Main {
                         }
                         System.out.println();
                         break;
+                    case 4: //update
+                        try(Connection connection = connectionFactory.getConnection()){
+                            Person newPerson = BlogHandler.readPersonData(scanner);
+                            BlogHandler.updatePerson(connection, newPerson);
 
+                        }catch(SQLException e) {
+                            System.err.println("Error code: " + e.getErrorCode());
+                            System.err.println("Message: " + e.getMessage());
+                            System.err.println("State: " + e.getSQLState());
+                            e.printStackTrace();
+                        }
+                        System.out.println();
+                        break;
                 }
 
             } while (menuItem != 0);
