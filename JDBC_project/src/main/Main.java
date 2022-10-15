@@ -84,6 +84,19 @@ public class Main {
                         }
                         System.out.println();
                         break;
+                    case 5: //delete
+                        try(Connection connection = connectionFactory.getConnection()){
+                            //Person newPerson = BlogHandler.readPersonData(scanner);
+                            BlogHandler.deletePerson(connection, scanner);
+
+                        }catch(SQLException e) {
+                            System.err.println("Error code: " + e.getErrorCode());
+                            System.err.println("Message: " + e.getMessage());
+                            System.err.println("State: " + e.getSQLState());
+                            e.printStackTrace();
+                        }
+                        System.out.println();
+                        break;
                 }
 
             } while (menuItem != 0);
@@ -128,8 +141,8 @@ public class Main {
         System.out.println("1. QueryAll");
         System.out.println("2. Select");
         System.out.println("3. Insert");
-        System.out.println("4. Delete");
-        System.out.println("5. Update");
+        System.out.println("4. Update");
+        System.out.println("5. Delete");
         System.out.println("6. \u001b[1;32m" + "NEW!" + "\u001b[0m");
         System.out.println("0. Exit");
     }

@@ -35,16 +35,19 @@ public class BlogHandler {
     }
 
     //DELETE
-    public static void deletePerson (Connection c, Person person) {
-        String insertPerson = "DELETE blogs.phonebook WHERE name =?, or  id =?";
+    public static void deletePerson (Connection c, Scanner scanner) {
+        String insertPerson = "DELETE from blogs.phonebook WHERE name =? or  number =?";
 
         try(PreparedStatement statement = c.prepareStatement(insertPerson)){
 
-            statement.setString(1, person.getName());
-            statement.setLong(2, person.getId());
+            System.out.print("name or number?: ");
+            String name = scanner.nextLine();
+
+            statement.setString(1, name);
+            statement.setString(2, name);
 
             int changedRows = statement.executeUpdate();
-            System.out.println("Changed rows: " + changedRows);
+            System.out.println("Deleted rows: " + changedRows);
 
             System.out.println("Posts table recreated");
         }catch(SQLException e) {
