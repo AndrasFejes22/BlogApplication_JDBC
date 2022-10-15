@@ -6,7 +6,7 @@ import java.sql.*;
 import java.time.ZonedDateTime;
 import java.util.Scanner;
 
-public class BlogHandler {
+public class PersonHandler {
 
 
     //INSERT

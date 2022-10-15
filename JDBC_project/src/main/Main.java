@@ -1,7 +1,7 @@
 package main;
 
 import connection.ConnectionFactory;
-import handler.BlogHandler;
+import handler.PersonHandler;
 import post.Person;
 
 import java.io.IOException;
@@ -33,7 +33,7 @@ public class Main {
                     case 1: //query all
                         try(Connection connection = connectionFactory.getConnection()){
 
-                            BlogHandler.queryAll(connection);
+                            PersonHandler.queryAll(connection);
 
                         }catch(SQLException e) {
                             System.err.println("Error code: " + e.getErrorCode());
@@ -48,7 +48,7 @@ public class Main {
                             String text = "";
                             System.out.println("Please give a number or a name: ");
                             text = scanner.nextLine();
-                            BlogHandler.select(connection, text);
+                            PersonHandler.select(connection, text);
 
                         }catch(SQLException e) {
                             System.err.println("Error code: " + e.getErrorCode());
@@ -60,8 +60,8 @@ public class Main {
                         break;
                     case 3: //insert
                         try(Connection connection = connectionFactory.getConnection()){
-                            Person newPerson = BlogHandler.readPersonData(scanner);
-                            BlogHandler.insertPerson(connection, newPerson);
+                            Person newPerson = PersonHandler.readPersonData(scanner);
+                            PersonHandler.insertPerson(connection, newPerson);
 
                         }catch(SQLException e) {
                             System.err.println("Error code: " + e.getErrorCode());
@@ -73,8 +73,8 @@ public class Main {
                         break;
                     case 4: //update
                         try(Connection connection = connectionFactory.getConnection()){
-                            Person newPerson = BlogHandler.readPersonData(scanner);
-                            BlogHandler.updatePerson(connection, newPerson);
+                            Person newPerson = PersonHandler.readPersonData(scanner);
+                            PersonHandler.updatePerson(connection, newPerson);
 
                         }catch(SQLException e) {
                             System.err.println("Error code: " + e.getErrorCode());
@@ -87,7 +87,7 @@ public class Main {
                     case 5: //delete
                         try(Connection connection = connectionFactory.getConnection()){
                             //Person newPerson = BlogHandler.readPersonData(scanner);
-                            BlogHandler.deletePerson(connection, scanner);
+                            PersonHandler.deletePerson(connection, scanner);
 
                         }catch(SQLException e) {
                             System.err.println("Error code: " + e.getErrorCode());
