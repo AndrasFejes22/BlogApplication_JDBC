@@ -161,9 +161,7 @@ public class PersonHandler {
         }
     }
 
-    public static void update(Connection c, Person person){
-        //String updatePost = "UPDATE post SET "
-    }
+
 
 
 

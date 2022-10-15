@@ -76,7 +76,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Post [id=" + id + ", " + (name != null ? "name = " + name + ", " : "")
+        return "Person [id=" + id + ", " + (name != null ? "name = " + name + ", " : "")
                 + (number != null ? "number = " + number + ", " : "") + (created != null ? "created = " + created + ", " : "")
                 + (slug != null ? "comment = " + slug : "") + "]";
     }
