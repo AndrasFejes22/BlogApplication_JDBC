@@ -1,1 +1,1 @@
-# BlogApplication_JDBC
+# BlogApplication_JDBC_OOP
